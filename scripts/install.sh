@@ -5,5 +5,6 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 sudo apt-get -y install zip
 unzip awscliv2.zip
 sudo ./aws/install
+sudo apt-get -y upgrade
 terraform -version
 aws --version
