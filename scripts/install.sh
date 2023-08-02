@@ -15,7 +15,9 @@ unzip awscliv2.zip
 sudo ./aws/install
 
 # install Docker
-sudo apt-get -y install docker.io
+for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh ./get-docker.sh
 
 # install Ansible
 sudo apt-get -y install ansible
@@ -31,4 +33,4 @@ terraform -version
 packer --version
 aws --version
 ansible --version
-docker --version
+docker version
